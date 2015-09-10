@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: bf134797c2e76984dac86781ae8c1385
-timeCreated: 1441565630
-licenseType: Pro
+guid: f4b2087814d94994fadbaaec34db9ff5
+timeCreated: 1441887403
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: fritz_0
@@ -39,6 +39,7 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -64,7 +65,7 @@ TextureImporter:
     - name: fritz_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 35
         y: 0
         width: 29
         height: 35
