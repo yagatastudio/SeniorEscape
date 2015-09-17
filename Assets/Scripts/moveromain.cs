@@ -21,7 +21,7 @@ public class moveromain : MonoBehaviour {
 		if (Input.GetKey (KeyCode.UpArrow)) {
 			if (DOUBLEJUMP>0) {
 				GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, jumpHeight);
-				DOUBLEJUMP--;
+	
 			}
 		}
 		if (Input.GetKey (KeyCode.RightArrow)) {
