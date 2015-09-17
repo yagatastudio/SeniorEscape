@@ -3,8 +3,9 @@ using System.Collections;
 
 public class movefritz : MonoBehaviour {
 
-	public float moveSpeed;
-	public float jumpHeight;
+	private float moveSpeed=10;
+	private float jumpHeight=15;
+	/*private float time=Time.fixedTime;*/
 
 	public int doublejump = 2;
 	const int DOUBLEJUMP = 2;
@@ -13,7 +14,7 @@ public class movefritz : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		transform.position = new Vector2 (-3, -1);
 		anim = GetComponent<Animator> ();
 
 	}
@@ -54,5 +55,16 @@ public class movefritz : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll)
 	{
 		doublejump = DOUBLEJUMP; // remet la valeur doublejump à 2;
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.CompareTag("Bonus_Speed")) {
+			other.gameObject.SetActive(false);
+			moveSpeed=20;
+			/*time=3;
+			if (time==30) {
+				moveSpeed=10;
+			}*/
+		}
 	}
 }

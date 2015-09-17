@@ -5,23 +5,27 @@ public class moveromain : MonoBehaviour {
 
 	public float moveSpeed;
 	public float jumpHeight;
-	const int DOUBLEJUMP=2;
+
+	public int doublejump = 2;
+	const int DOUBLEJUMP = 2;
 
 	private Animator anim;
 
 	// Use this for initialization
 	void Start () {
-	
+		transform.position = new Vector2 (-3, -1);
 		anim = GetComponent<Animator> ();
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.UpArrow)) {
-			if (DOUBLEJUMP>0) {
+
+		if (Input.GetKeyDown (KeyCode.UpArrow)) {
+			if (doublejump > 0) 
+			{
 				GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, jumpHeight);
-				DOUBLEJUMP--;
+				doublejump --;
 			}
 		}
 		if (Input.GetKey (KeyCode.RightArrow)) {
@@ -44,5 +48,10 @@ public class moveromain : MonoBehaviour {
 		}
 
 
+	}
+
+	void OnCollisionEnter2D(Collision2D coll)
+	{
+		doublejump = DOUBLEJUMP; // remet la valeur doublejump à 2;
 	}
 }
