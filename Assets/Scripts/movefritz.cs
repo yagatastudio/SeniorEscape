@@ -6,7 +6,8 @@ public class movefritz : MonoBehaviour {
 	public float moveSpeed;
 	public float jumpHeight;
 
-
+	public int doublejump = 2;
+	const int DOUBLEJUMP = 2;
 
 	private Animator anim;
 
@@ -20,10 +21,13 @@ public class movefritz : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKey (KeyCode.W)) {
-
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, jumpHeight);
-		} 
+		if (Input.GetKeyDown (KeyCode.W)) {
+			if (doublejump > 0)
+			{
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, jumpHeight);
+				doublejump --;
+			}
+		}  
 
 		if (Input.GetKey (KeyCode.D)) {
 			
@@ -46,5 +50,9 @@ public class movefritz : MonoBehaviour {
 		}
 
 
+	}
+	void OnCollisionEnter2D(Collision2D coll)
+	{
+		doublejump = DOUBLEJUMP; // remet la valeur doublejump à 2;
 	}
 }
