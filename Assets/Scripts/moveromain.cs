@@ -5,12 +5,7 @@ public class moveromain : MonoBehaviour {
 
 	public float moveSpeed;
 	public float jumpHeight;
-
-	//Variable servant pour l'ampêchement des sauts infinis
-	public Transform GroundCheck;
-	public float GroundCheckRadius;
-	public LayerMask WhatIsGround;
-	private bool Grounded;
+	const int DOUBLEJUMP=2;
 
 	private Animator anim;
 
@@ -23,10 +18,11 @@ public class moveromain : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		if (Input.GetKey (KeyCode.UpArrow)) {
-
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, jumpHeight);
+			if (DOUBLEJUMP>0) {
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, jumpHeight);
+				DOUBLEJUMP--;
+			}
 		}
 		if (Input.GetKey (KeyCode.RightArrow)) {
 			
