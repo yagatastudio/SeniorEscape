@@ -1,0 +1,48 @@
+//Variable pour la vitesse de déplacement et la hauteur du saut du personnage
+public float Speed;
+public float HightJump;
+
+//Variable servant pour l'ampêchement des sauts infinis
+public Transform GroundCheck;
+public float GroundCheckRadius;
+public LayerMask WhatIsGround;
+privat bool Grounded;
+
+//Variable servant pour le double saut
+private bool DoubleJump;
+
+void FixedUpdate()
+{
+	//tu devras créer un EmptyChild et l'appeler GroundCheck. Après, tu le mettras dans le GroundCheck (variable public donc elle sera afficher dans le script sur unity)
+	//Après tu mettras l'empty créer, la box de celui-ci, avec le bas qui est mis sous le bas de notre character
+	
+	Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheckRadius, WhatIsGround);
+}
+
+void Update() 
+{
+	if(Grounded)
+	{
+		DoubleJump=false;
+	}
+	if(Input.GetKeyDown(KeyCode.W) && Grounded)
+	{
+		GetComponent<Rigidbody2D>().Velocity= new Vector2(GetComponent<Rigidbody2D>().Velocity.x, HightJump);
+	}
+
+	if(Input.GetKeyDown(KeyCode.W) && !DoubleJump && !Grounded)
+	{
+		GetComponent<Rigidbody2D>().Velocity= new Vector2(GetComponent<Rigidbody2D>().Velocity.x, HightJump);
+		DoubleJump=true;
+	}
+
+	if(Input.GetKeyDown(KeyCode.D))
+	{
+		GetComponent<Rigidbody2D>().Velocity= new Vector2(Speed, GetComponent<Rigidbody2D>().Velocity.y);
+	}
+
+	if(Input.GetKeyDown(KeyCode.A))
+	{
+		GetComponent<Rigidbody2D>().Velocity= new Vector2(-Speed, GetComponent<Rigidbody2D>().Velocity.y);
+	}
+}
