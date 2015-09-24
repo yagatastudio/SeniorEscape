@@ -3,8 +3,8 @@ using System.Collections;
 
 public class movefritz : MonoBehaviour {
 
-	private float moveSpeed=10;
-	private float jumpHeight=15;
+	private float moveSpeed=15;
+	private float jumpHeight=20;
 	public float Timer=3;
 
 	public int doublejump = 2;
@@ -14,7 +14,7 @@ public class movefritz : MonoBehaviour {
 
 	//Se lance au démarrage du jeu
 	void Start () {
-		transform.position = new Vector2 (-3, -1);
+		transform.position = new Vector2 (-4, -2);
 		anim = GetComponent<Animator> ();
 
 	}
@@ -22,10 +22,10 @@ public class movefritz : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Temps pour le bonus de movespeed
-		if (moveSpeed!=10) {
+		if (moveSpeed!=15) {
 			Timer -= Time.deltaTime;
 			if (Timer<=0) {
-				moveSpeed=10;
+				moveSpeed=15;
 				Timer=0;
 			}
 		}
@@ -43,13 +43,12 @@ public class movefritz : MonoBehaviour {
 			
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 
-			transform.localScale = new Vector3 (5, 5, 5);
 			anim.SetFloat ("speedfritz", 2);
 			if (Input.GetKey (KeyCode.S)) {
 				if (Input.GetKeyUp(KeyCode.S)) {
-					transform.localScale = new Vector2 (5f,5f);
+					transform.localScale=new Vector2(8,8);
 				} else{
-					transform.localScale = new Vector2 (2f,2f);
+					transform.localScale=new Vector2(5,5);
 				}
 			}
 
@@ -57,13 +56,12 @@ public class movefritz : MonoBehaviour {
 			
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 
-			transform.localScale = new Vector3 (-5, 5, 5);
 			anim.SetFloat ("speedfritz", 2);
 			if (Input.GetKey (KeyCode.S)) {
 				if (Input.GetKeyUp(KeyCode.S)) {
-					transform.localScale = new Vector2 (5f,5f);
+					transform.localScale = new Vector2 (8,8);
 				} else{
-					transform.localScale = new Vector2 (2f,2f);
+					transform.localScale = new Vector2 (5,5);
 				}
 			}
 		} 
@@ -82,11 +80,11 @@ public class movefritz : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.CompareTag("Bonus_Speed")) {
 			other.gameObject.SetActive(false);
-			moveSpeed=20;
+			moveSpeed=25;
 		}
 
 		if (other.gameObject.CompareTag("Jump_Spring")) {
-			GetComponent<Rigidbody2D>().velocity=new Vector3(0,30,0);
+			GetComponent<Rigidbody2D>().velocity=new Vector3(0,40,0);
 		}
 	}
 }
