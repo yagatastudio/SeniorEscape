@@ -42,6 +42,7 @@ public class moveromain : MonoBehaviour {
 			
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 
+			transform.localScale = new Vector3 (7,7,3);
 			anim.SetFloat ("speedromain", 2);
 			if (Input.GetKey(KeyCode.DownArrow)) {
 				if (Input.GetKeyUp(KeyCode.DownArrow)) {
@@ -54,7 +55,8 @@ public class moveromain : MonoBehaviour {
 		} else if (Input.GetKey (KeyCode.LeftArrow)) {
 			
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
-
+			
+			transform.localScale = new Vector3 (7,7,3);
 			anim.SetFloat ("speedromain", 2);
 			if (Input.GetKey (KeyCode.DownArrow)) {
 				if (Input.GetKeyUp(KeyCode.DownArrow)) {

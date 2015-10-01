@@ -43,6 +43,7 @@ public class movefritz : MonoBehaviour {
 			
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 
+			transform.localScale = new Vector3 (8,8,3);
 			anim.SetFloat ("speedfritz", 2);
 			if (Input.GetKey (KeyCode.S)) {
 				if (Input.GetKeyUp(KeyCode.S)) {
@@ -56,6 +57,7 @@ public class movefritz : MonoBehaviour {
 			
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 
+			transform.localScale = new Vector3 (8,8,3);
 			anim.SetFloat ("speedfritz", 2);
 			if (Input.GetKey (KeyCode.S)) {
 				if (Input.GetKeyUp(KeyCode.S)) {
