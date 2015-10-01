@@ -1,22 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class moveromain : MonoBehaviour {
-
-	private float moveSpeed=15;
-	private float jumpHeight=20;
-	public float Timer=3;
-
-	public int doublejump = 2;
-	const int DOUBLEJUMP = 2;
-
+public class moveromain : MoveCharacter {
 	private Animator anim;
 
 	//Se lance au démarrage du jeu
 	void Start () {
-		transform.position = new Vector2 (-3, -1);
 		anim = GetComponent<Animator> ();
-
+		transform.localScale = new Vector3 (7,7,3);
 	}
 	
 	// Update is called once per frame
@@ -56,7 +47,7 @@ public class moveromain : MonoBehaviour {
 			
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 			
-			transform.localScale = new Vector3 (7,7,3);
+			transform.localScale = new Vector3 (-7,7,3);
 			anim.SetFloat ("speedromain", 2);
 			if (Input.GetKey (KeyCode.DownArrow)) {
 				if (Input.GetKeyUp(KeyCode.DownArrow)) {
@@ -71,21 +62,5 @@ public class moveromain : MonoBehaviour {
 			anim.SetFloat ("speedromain", 0);
 		}
 	}
-
-	void OnCollisionEnter2D(Collision2D coll)
-	{
-		doublejump = DOUBLEJUMP; // remet la valeur doublejump à 2;
-	}
-
-	//Vérifie si le personnage rentre en collision avec un objet du groupe Bonus_Speed et si oui, augmente ça vitesse
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.CompareTag("Bonus_Speed")) {
-			other.gameObject.SetActive(false);
-			moveSpeed=25;
-		}
-
-		if (other.gameObject.CompareTag("Jump_Spring")) {
-			GetComponent<Rigidbody2D>().velocity=new Vector3(0,40,0);
-		}
-	}
+	
 }
