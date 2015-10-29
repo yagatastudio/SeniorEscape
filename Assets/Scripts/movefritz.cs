@@ -11,7 +11,7 @@ public class movefritz : MoveCharacter {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		//Temps pour le bonus de movespeed
 		if (moveSpeed!=15) {
 			Timer -= Time.deltaTime;

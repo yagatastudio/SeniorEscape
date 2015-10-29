@@ -70,7 +70,8 @@ public class MoveCharacter : MonoBehaviour {
     }
 
 	protected void respawn(){
-		transform.position = new Vector2 (-24, -40);
+		//transform.position = new Vector2 (-24, -40);
+        transform.position = new Vector2(40, 33);
 	}
 
 	//Vérifie si le personnage rentre en collision avec un objet du groupe Bonus_Speed et si oui, augmente ça vitesse
