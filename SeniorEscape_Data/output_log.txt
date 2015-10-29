@@ -1,4 +1,4 @@
-Initialize engine version: 5.2.0f3 (e7947df39b5c)
+Initialize engine version: 5.2.2f1 (3757309da7e7)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
@@ -15,7 +15,7 @@ Loading F:\SeniorEscape\SeniorEscape_Data\Managed\UnityEngine.UI.dll into Unity 
 Platform assembly: F:\SeniorEscape\SeniorEscape_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading F:\SeniorEscape\SeniorEscape_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: F:\SeniorEscape\SeniorEscape_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.040 seconds
+- Completed reload, in  0.043 seconds
 desktop: 1280x1024 60Hz; virtual: 1280x1024 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
@@ -23,5 +23,11 @@ XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Initialized touch support.
 Platform assembly: F:\SeniorEscape\SeniorEscape_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1190 -> priority: 1 
-  Thread -> id: 14d0 -> priority: 1 
+  Thread -> id: 230 -> priority: 1 
+  Thread -> id: 1bcc -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.019666 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 287.
+Total: 0.247318 ms (FindLiveObjects: 0.019533 ms CreateObjectMapping: 0.016885 ms MarkObjects: 0.159581 ms  DeleteObjects: 0.050986 ms)
+
