@@ -8,6 +8,7 @@ public class movefritz : MoveCharacter {
 	void Start () {
 		anim = GetComponent<Animator> ();
 		transform.localScale = new Vector3 (8,8,3);
+        respawn();
 	}
 	
 	// Update is called once per frame
@@ -62,5 +63,6 @@ public class movefritz : MoveCharacter {
 		{
 			anim.SetFloat ("speedfritz", 0);
 		}
+
 	}
 }

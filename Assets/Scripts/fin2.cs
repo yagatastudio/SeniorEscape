@@ -2,10 +2,14 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class fin2 : MonoBehaviour {
+public class fin2 : MonoBehaviour
+{
     public static Personnage gagnant;
+
+    public GUIStyle recommencer;
+    public GUIStyle menu;
     Text text1;
-	// Use this for initialization
+    // Use this for initialization
     void Start()
     {
         Debug.Log("START");
@@ -24,11 +28,19 @@ public class fin2 : MonoBehaviour {
             text1.text = "Erreur";
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-	    
-	}
+
+    void OnGUI()
+    {
+        if (GUI.Button(new Rect(Screen.width / 2 - 300, Screen.height / 2 + 80, 250, 80), "", recommencer))
+        {
+            Application.LoadLevel(1);
+        }
+
+        if (GUI.Button(new Rect(Screen.width / 2 + 50, Screen.height / 2 + 80, 250, 80), "", menu))
+        {
+            Application.LoadLevel(0);
+        }
+    }
 }
 
 public enum Personnage {

@@ -8,6 +8,7 @@ public class moveromain : MoveCharacter {
 	void Start () {
 		anim = GetComponent<Animator> ();
 		transform.localScale = new Vector3 (7,7,3);
+        respawn();
 	}
 	
 	// Update is called once per frame
@@ -46,7 +47,6 @@ public class moveromain : MoveCharacter {
 		} else if (Input.GetKey (KeyCode.LeftArrow)) {
 			
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
-			
 			transform.localScale = new Vector3 (-7,7,3);
 			anim.SetFloat ("speedromain", 2);
 			if (Input.GetKey (KeyCode.DownArrow)) {

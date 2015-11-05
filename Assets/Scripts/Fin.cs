@@ -6,6 +6,7 @@ public class Fin : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Cursor.visible = true;
         if (other.gameObject.CompareTag("Romain"))
         {
             fin2.gagnant = Personnage.ROMAIN;

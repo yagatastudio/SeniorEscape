@@ -6,28 +6,46 @@ Direct3D:
     Vendor:   Intel
     VRAM:     256 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: F:\SeniorEscape\SeniorEscape_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading F:\SeniorEscape\SeniorEscape_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: F:\SeniorEscape\SeniorEscape_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading F:\SeniorEscape\SeniorEscape_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: F:\SeniorEscape\SeniorEscape_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading F:\SeniorEscape\SeniorEscape_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: F:\SeniorEscape\SeniorEscape_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading F:\SeniorEscape\SeniorEscape_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: F:\SeniorEscape\SeniorEscape_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.043 seconds
+Platform assembly: F:\SeniorEscape\SeniorEscape_master\SeniorEscape_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\SeniorEscape\SeniorEscape_master\SeniorEscape_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\SeniorEscape\SeniorEscape_master\SeniorEscape_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\SeniorEscape\SeniorEscape_master\SeniorEscape_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\SeniorEscape\SeniorEscape_master\SeniorEscape_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\SeniorEscape\SeniorEscape_master\SeniorEscape_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\SeniorEscape\SeniorEscape_master\SeniorEscape_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\SeniorEscape\SeniorEscape_master\SeniorEscape_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\SeniorEscape\SeniorEscape_master\SeniorEscape_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.107 seconds
 desktop: 1280x1024 60Hz; virtual: 1280x1024 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: F:\SeniorEscape\SeniorEscape_Data\Managed\System.dll (this message is harmless)
+Platform assembly: F:\SeniorEscape\SeniorEscape_master\SeniorEscape_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 230 -> priority: 1 
-  Thread -> id: 1bcc -> priority: 1 
+  Thread -> id: 4ac -> priority: 1 
+  Thread -> id: f34 -> priority: 1 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.019666 ms
+UnloadTime: 3.701839 ms
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 287.
-Total: 0.247318 ms (FindLiveObjects: 0.019533 ms CreateObjectMapping: 0.016885 ms MarkObjects: 0.159581 ms  DeleteObjects: 0.050986 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 331.
+Total: 0.248312 ms (FindLiveObjects: 0.018209 ms CreateObjectMapping: 0.013243 ms MarkObjects: 0.193683 ms  DeleteObjects: 0.020196 ms)
+
+Romain
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.466164 ms
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 212.
+Total: 0.319826 ms (FindLiveObjects: 0.015229 ms CreateObjectMapping: 0.008277 ms MarkObjects: 0.241028 ms  DeleteObjects: 0.054297 ms)
+
+START
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+ROMAIN
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
