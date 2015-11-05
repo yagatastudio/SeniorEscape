@@ -13,6 +13,7 @@ public class moveromain : MoveCharacter {
 	
 	// Update is called once per frame
 	void Update () {
+        base.Update();
 		//Temps pour le bonus de movespeed
 		if (moveSpeed!=15) {
 			Timer -= Time.deltaTime;

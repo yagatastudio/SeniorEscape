@@ -46,4 +46,16 @@ public class MoveCharacter : MonoBehaviour {
 	{
 		doublejump = DOUBLEJUMP; // remet la valeur doublejump à 2;
 	}
+
+    public void Update()
+    {
+        if (compte_a_rebour_debut.stopped)
+        {
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        }
+    }
 }
